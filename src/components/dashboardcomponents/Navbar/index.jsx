@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = ({ isLogin, activeTab, setActiveTab }) => {
   const navigate = useNavigate();
   const logout = () => {
-    fetch("http://localhost:3000/api/logout", {
+    fetch("https://use-gallery-api.onrender.com/api/logout", {
       credentials: "include",
       method: "POST",
     })

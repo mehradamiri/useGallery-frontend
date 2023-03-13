@@ -15,7 +15,7 @@ const Login = () => {
       const formData = new URLSearchParams();
       formData.append("username", username);
       formData.append("password", password);
-      fetch("http://localhost:3000/api/login", {
+      fetch("https://use-gallery-api.onrender.com/api/login", {
         credentials: "include",
         method: "POST",
         headers: {

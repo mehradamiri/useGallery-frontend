@@ -7,7 +7,7 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:3000/api/checksession", {
+    fetch("https://use-gallery-api.onrender.com/api/checksession", {
       credentials: "include",
       method: "get",
     })

@@ -34,7 +34,7 @@ const Home = () => {
 
   useEffect(() => {
     componentWillMount();
-    fetch("http://localhost:3000/api/artInfo")
+    fetch("https://use-gallery-api.onrender.com/api/artInfo")
       .then((res) => res.json())
       .then((data) => setArtData(data));
   }, []);
@@ -43,7 +43,9 @@ const Home = () => {
     const fetchImageUrls = async () => {
       const urls = await Promise.all(
         artData.map((element) =>
-          fetch(`http://localhost:3000/api/getImg/${element.art_id}`)
+          fetch(
+            `https://use-gallery-api.onrender.com/api/getImg/${element.art_id}`
+          )
             .then((res) => res.blob())
             .then((blob) => URL.createObjectURL(blob))
         )

@@ -12,7 +12,7 @@ const EditPost = ({ editId, setEditId }) => {
     const formData = new URLSearchParams();
     formData.append("name", newName);
     formData.append("password", newDescription);
-    fetch(`http://localhost:3000/api/updatePost/${editId}`, {
+    fetch(`https://use-gallery-api.onrender.com/api/updatePost/${editId}`, {
       credentials: "include",
       method: "PUT",
       headers: {

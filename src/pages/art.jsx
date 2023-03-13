@@ -8,11 +8,11 @@ const Art = () => {
   const [imageUrl, setimageUrl] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/artInfo/${id}`)
+    fetch(`https://use-gallery-api.onrender.com/api/artInfo/${id}`)
       .then((res) => res.json())
       .then((data) => setArtData(data));
 
-    fetch(`http://localhost:3000/api/getImg/${id}`)
+    fetch(`https://use-gallery-api.onrender.com/api/getImg/${id}`)
       .then((res) => res.blob())
       .then((blob) => setimageUrl(URL.createObjectURL(blob)));
   }, [id]);

@@ -17,7 +17,7 @@ const Control = ({ page, setActiveTab }) => {
     formData.append("name", addPostName);
     formData.append("description", addPostDescription);
     formData.append("artImg", artImg);
-    fetch("http://localhost:3000/api/postart/", {
+    fetch("https://use-gallery-api.onrender.com/api/postart/", {
       method: "POST",
       credentials: "include",
       body: formData,
